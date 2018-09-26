@@ -2,16 +2,14 @@
 
 My customization of SciTE/Scintilla and Scintillua
 
-jms-scintillua-win32.zip is Windows version of SciTE 3.7.5. + Scintillua 3.7.5 + my customization
-
-Customization:
+jms-scintillua-win32.zip is Windows version of SciTE 3.7.5. + Scintillua 3.7.5 + my customization:
  - Commented out markdown lexer (lexers\lpeg.properties)
  - Added startup.lua
  - Customized version of SciTEGlobal.properties
  - jms and jms-dark themes using xkcd colors
  - Sample SciTEUser.properties is provided, though it doesn't do anything
 
-Usage
+Usage:
  - Unzip
  - Optionally copy SciTEUser.properties to %USERPROFILE%
  - Paste shortcut of SciTE.exe to shell:sendto and pin SciTE to taskbar or Start menu
