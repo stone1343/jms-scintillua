@@ -5,14 +5,9 @@ if "%1"=="" (
   echo %~n0 dest
   goto :eof
 )
-if not exist %1\lexers\themes (
-  echo SciTE and Scintillua must already be installed
-  goto :eof
-)
 
-call :smartfilecopy scintillua\startup.lua %1\startup.lua
-call :smartfilecopy scintillua\lexers\themes\jms.lua %1\lexers\themes\jms.lua
-call :smartfilecopy scintillua\lexers\themes\jms-dark.lua %1\lexers\themes\jms-dark.lua
+xcopy /y /d windows\* %1
+xcopy /y /d scintillua\* %1
 call :smartfilecopy windows\SciTEGlobal.properties %1\SciTEGlobal.properties
 call :smartfilecopy windows\SciTEUser.properties %USERPROFILE%\SciTEUser.properties
 goto :eof
