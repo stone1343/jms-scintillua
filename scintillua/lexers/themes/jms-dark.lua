@@ -1,17 +1,16 @@
 -- JMS Dark  theme
--- 2018-10-21
+-- 2018-11-20
 
 local property = require('lexer').property
 
 property['colour.black'] = '#111111'
-property['colour.grey'] = '#888888'
-property['colour.white'] = '#EEEEEE'
-property['colour.red'] = '#EE3333'
-property['colour.orange'] = '#EE8833'
-property['colour.green'] = '#33EE33'
-property['colour.turquoise'] = '#33EEEE'
-property['colour.blue'] = '#5555FF'
-property['colour.purple'] = '#EE22EE'
+property['colour.grey'] = '#777777'
+property['colour.white'] = '#DDDDDD'
+property['colour.red'] = '#FF0000'
+property['colour.yellow'] = '#E6DC65'
+property['colour.green'] = '#77C32F'
+property['colour.blue'] = '#67A2F0'
+property['colour.purple'] = '#AF82FF'
 
 -- Default style.
 property['style.default'] = 'fore:$(colour.white),back:$(colour.black)'
@@ -22,11 +21,11 @@ property['style.whitespace'] = '$(style.nothing)'
 property['style.identifier'] = 'fore:$(colour.white)'
 property['style.comment'] = 'fore:$(colour.grey)'
 property['style.error'] = 'fore:$(colour.red)'
-property['style.label'] = 'fore:$(colour.orange)'
-property['style.constant'] = 'fore:$(colour.orange)'
-property['style.variable'] = 'fore:$(colour.orange)'
+property['style.constant'] = 'fore:$(colour.yellow)'
+property['style.label'] = 'fore:$(colour.yellow)'
+property['style.regex'] = 'fore:$(colour.yellow)'
+property['style.variable'] = 'fore:$(colour.yellow)'
 property['style.number'] = 'fore:$(colour.green)'
-property['style.regex'] = 'fore:$(colour.turquoise)'
 property['style.class'] = 'fore:$(colour.blue)'
 property['style.definition'] = 'fore:$(colour.blue)'
 property['style.embedded'] = 'fore:$(colour.blue)'
