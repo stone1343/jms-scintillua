@@ -1,5 +1,5 @@
 -- JMS Light theme
--- 2018-11-20
+-- 2018-12-08 - Changed purple from #AA11AA to #881199
 
 local property = require('lexer').property
 
@@ -10,7 +10,7 @@ property['colour.red'] = '#FF0000'
 property['colour.orange'] = '#FF8800'
 property['colour.green'] = '00AA00'
 property['colour.blue'] = '#4466EE'
-property['colour.purple'] = '#AA11AA'
+property['colour.purple'] = '#881199'
 
 -- Default style.
 property['style.default'] = 'fore:$(colour.black),back:$(colour.white)'
