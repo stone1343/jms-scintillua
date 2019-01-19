@@ -1,9 +1,9 @@
 -- JMS Dark  theme
--- 2018-11-20
+-- 2019-01-19 - Changed black from #111111 to #222222
 
 local property = require('lexer').property
 
-property['colour.black'] = '#111111'
+property['colour.black'] = '#222222'
 property['colour.grey'] = '#777777'
 property['colour.white'] = '#DDDDDD'
 property['colour.red'] = '#FF0000'
