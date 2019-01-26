@@ -1,5 +1,5 @@
 -- startup.lua
--- 2018-10-21
+-- 2019-01-26
 
 function findTab()
   local nextPos = (editor:findtext("[\t]", SCFIND_REGEXP, editor.CurrentPos+1))

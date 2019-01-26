@@ -1,5 +1,5 @@
 -- JMS Light theme
--- 2018-12-08 - Changed purple from #AA11AA to #881199
+-- 2019-01-26
 
 local property = require('lexer').property
 
