@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+# Get ready...
+[ ! -d scintillua_3.7.5-1 ] && unzip scintillua_3.7.5-1.zip
+cd scintillua_3.7.5-1
+[ ! -d scite375 ] && tar xf ../scite375.tgz
+[ ! -d lpeg-1.0.1 ] && tar xf ../lpeg-1.0.1.tar.gz
+if [ ! -d lua/src/lib ]; then
+  mkdir -p lua/src/lib
+  cp scite/lua/include/*.h lua/src
+  cp scite/lua/src/*.h lua/src
+  cp scite/lua/src/*.c lua/src
+  cp scite/lua/src/lib/*.c lua/src
+  cp lpeg-1.0.1/* lua/src/lib
+fi
+
+# To start again, make clean GTK3=GTK3
+cd scintilla/gtk
+make GTK3=GTK3
+cd ../../scite/gtk
+make GTK3=GTK3
+cd ../..
+make GTK3=GTK3
+rm lexers/LexLPeg.dll
+
+echo -e "\nNow:"
+echo "sudo ./install"

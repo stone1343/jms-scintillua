@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+# If build has been done, install everything
+if [ -d scintillua_3.7.5-1/scite/gtk ]; then
+  cd scintillua_3.7.5-1/scite/gtk
+  make install GTK3=GTK3
+  cd ../..
+  cp -rp lexers /usr/share/scite
+  cd ..
+fi
+
+# Regardless whether build has been done, install jms-scintillua files
+install -m 644 scintillua/startup.lua /usr/share/scite
+cp -rp scintillua/lexers /usr/share/scite
+install -m 644 linux/SciTEGlobal.properties /usr/share/scite
+
+cp -p linux/SciTEUser.properties $HOME/.SciTEUser.properties
+chown $USER:$USER $HOME/.SciTEUser.properties
+
+chown -R $USER:$USER /usr/share/scite/
