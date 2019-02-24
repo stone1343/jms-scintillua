@@ -1,5 +1,11 @@
 #!/usr/bin/bash
 
+if [ $EUID -ne 0 ]; then
+  echo "This must be run as root" >&2
+  set -e
+  exit 1
+fi
+
 # If build has been done, install everything
 if [ -d scintillua_3.7.5-1/scite/gtk ]; then
   cd scintillua_3.7.5-1/scite/gtk
@@ -15,6 +21,6 @@ cp -rp scintillua/lexers /usr/share/scite
 install -m 644 linux/SciTEGlobal.properties /usr/share/scite
 
 cp -p linux/SciTEUser.properties $HOME/.SciTEUser.properties
-chown $USER:$USER $HOME/.SciTEUser.properties
+chown $SUDO_USER:$SUDO_USER $HOME/.SciTEUser.properties
 
-chown -R $USER:$USER /usr/share/scite/
+chown -R $SUDO_USER:$SUDO_USER /usr/share/scite/
