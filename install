@@ -20,7 +20,7 @@ install -m 644 scintillua/startup.lua /usr/share/scite
 cp -rp scintillua/lexers /usr/share/scite
 install -m 644 linux/SciTEGlobal.properties /usr/share/scite
 
-cp -p linux/SciTEUser.properties $HOME/.SciTEUser.properties
-chown $SUDO_USER:$SUDO_USER $HOME/.SciTEUser.properties
+install -m 644 linux/SciTEUser.properties $HOME/.SciTEUser.properties
+chown $USER:$USER $HOME/.SciTEUser.properties
 
-chown -R $SUDO_USER:$SUDO_USER /usr/share/scite/
+chown -R $USER:$USER /usr/share/scite/
